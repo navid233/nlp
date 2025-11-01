@@ -1,0 +1,602 @@
+import React from 'react';
+import { Building2, TrendingUp, Users, Target, Zap, Shield } from 'lucide-react';
+
+const Presentation = () => {
+  const [currentPage, setCurrentPage] = React.useState(1);
+  const totalPages = 9;
+
+  const pages = [
+    // Page 1 - Opening Vision & 3-Way Win Combined
+    <div key="1" className="p-12 bg-gradient-to-br from-slate-900 to-slate-800 text-white min-h-screen flex flex-col">
+      <div className="mb-8">
+        <h1 className="text-5xl font-bold mb-4">Unlocking Value from Bank NPL Portfolios in the UAE</h1>
+        <p className="text-2xl text-blue-300 mb-2">Distressed Asset Acquisition</p>
+        <p className="text-lg text-gray-300">We acquire over-levered, non-performing assets from bank portfolios and restore them to profitability through hands-on operational turnarounds.</p>
+      </div>
+
+      <div className="grid grid-cols-3 gap-6 mt-8">
+        <div className="bg-slate-800 p-6 rounded-lg border border-blue-500">
+          <TrendingUp className="w-12 h-12 text-blue-400 mb-4" />
+          <h3 className="text-xl font-bold mb-3">For Investors</h3>
+          <ul className="text-sm space-y-2 text-gray-300">
+            <li>• Acquire quality assets at attractive valuations below intrinsic value</li>
+            <li>• Create substantial value through operational improvements</li>
+            <li>• Generate significant risk-adjusted returns with downside protection</li>
+            <li>• Target IRRs {">"} 25% within 3-5 year hold period</li>
+          </ul>
+        </div>
+
+        <div className="bg-slate-800 p-6 rounded-lg border border-green-500">
+          <Building2 className="w-12 h-12 text-green-400 mb-4" />
+          <h3 className="text-xl font-bold mb-3">For Banks</h3>
+          <ul className="text-sm space-y-2 text-gray-300">
+            <li>• Clean balance sheets and improve capital ratios immediately</li>
+            <li>• Recover meaningful value from written-down assets</li>
+            <li>• Avoid prolonged regulatory pressure and provisioning requirements</li>
+            <li>• Transfer ongoing risk and management burden</li>
+          </ul>
+        </div>
+
+        <div className="bg-slate-800 p-6 rounded-lg border border-purple-500">
+          <Users className="w-12 h-12 text-purple-400 mb-4" />
+          <h3 className="text-xl font-bold mb-3">For Shareholders</h3>
+          <ul className="text-sm space-y-2 text-gray-300">
+            <li>• <strong>Shareholder Engagement:</strong> By providing a small equity position for future upside to resolve potential legal issues, costs, and secondary implications that could improve overall return</li>
+            <li>• Avoid lengthy, costly court proceedings</li>
+            <li>• Preserve business continuity and legacy</li>
+          </ul>
+        </div>
+      </div>
+
+      <div className="mt-8 grid grid-cols-2 gap-6">
+        <div className="bg-blue-900 p-6 rounded-lg">
+          <h3 className="text-2xl font-bold mb-2">Superior Returns</h3>
+          <p className="text-gray-300">Delivering risk-adjusted returns by transforming distressed assets</p>
+        </div>
+        <div className="bg-green-900 p-6 rounded-lg">
+          <h3 className="text-2xl font-bold mb-2">Bank Relief</h3>
+          <p className="text-gray-300">Relieving banks of impaired exposures and cleaning up balance sheets</p>
+        </div>
+      </div>
+    </div>,
+
+    // Page 2 - Investors Capture (with different font style)
+    <div key="2" className="p-12 bg-white min-h-screen flex flex-col">
+      <div className="mb-8">
+        <h1 className="text-6xl font-black mb-6 text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600" style={{fontFamily: 'Impact, sans-serif'}}>
+          INVESTORS CAPTURE DISTRESSED ALPHA
+        </h1>
+        <p className="text-xl text-gray-700 mb-8">We purchase assets below replacement cost and outstanding debt, capturing immediate embedded value. Returns are amplified through active restructuring and operational upgrades.</p>
+      </div>
+
+      <div className="grid grid-cols-2 gap-8">
+        <div className="bg-blue-50 p-8 rounded-lg border-l-4 border-blue-600">
+          <h3 className="text-3xl font-bold mb-4 text-blue-900">Target IRRs {">"} 25%</h3>
+          <p className="text-gray-700">Within a 3-5 year hold period</p>
+        </div>
+
+        <div className="bg-gradient-to-br from-blue-600 to-purple-600 p-8 rounded-lg text-white">
+          <h3 className="text-2xl font-bold mb-4">Value Creation Drivers</h3>
+          <ul className="space-y-3">
+            <li className="flex items-start">
+              <span className="mr-2">→</span>
+              <span>Acquire at deep discount to intrinsic value</span>
+            </li>
+            <li className="flex items-start">
+              <span className="mr-2">→</span>
+              <span>Implement hands-on operational improvements</span>
+            </li>
+            <li className="flex items-start">
+              <span className="mr-2">→</span>
+              <span>Strategically reposition the business for growth</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div className="mt-8 bg-gradient-to-r from-gray-100 to-gray-200 p-8 rounded-lg">
+        <div className="grid grid-cols-3 gap-6 text-center">
+          <div>
+            <div className="text-4xl font-bold text-blue-600 mb-2">0.4-0.6x</div>
+            <div className="text-sm text-gray-600">Acquisition Price vs Outstanding Debt</div>
+          </div>
+          <div>
+            <div className="text-4xl font-bold text-green-600 mb-2">2.5-3.0x</div>
+            <div className="text-sm text-gray-600">Cash-on-Cash Multiple</div>
+          </div>
+          <div>
+            <div className="text-4xl font-bold text-purple-600 mb-2">25-35%</div>
+            <div className="text-sm text-gray-600">Target IRR</div>
+          </div>
+        </div>
+      </div>
+    </div>,
+
+    // Page 3 - Banks Clean & Assets Trapped Combined
+    <div key="3" className="p-12 bg-gradient-to-br from-green-50 to-blue-50 min-h-screen flex flex-col">
+      <h1 className="text-5xl font-bold mb-8 text-gray-900">Banks Clean Balance Sheets & Recover Value</h1>
+
+      <div className="grid grid-cols-2 gap-8 mb-8">
+        <div className="bg-white p-8 rounded-lg shadow-lg border-l-4 border-red-500">
+          <h3 className="text-2xl font-bold mb-4 text-red-700">Current State: Impaired Assets</h3>
+          <p className="text-gray-700">Regulatory capital drag, prolonged provisioning, and uncertain recovery</p>
+          
+          <div className="mt-6 bg-red-50 p-4 rounded">
+            <h4 className="font-bold text-red-800 mb-2">Assets Trapped on Bank Books</h4>
+            <p className="text-sm text-gray-700">Over-levered companies remain frozen on bank balance sheets. Without operational expertise, lenders allow enterprise value to erode, turning temporary distress into permanent destruction.</p>
+          </div>
+
+          <div className="mt-4 grid grid-cols-2 gap-4 text-sm">
+            <div className="bg-red-100 p-3 rounded">
+              <div className="font-bold text-red-900">Written Down</div>
+              <div className="text-gray-700">Assets often written down to near-zero value</div>
+            </div>
+            <div className="bg-red-100 p-3 rounded">
+              <div className="font-bold text-red-900">Consume Bandwidth</div>
+              <div className="text-gray-700">Distract from core lending activities</div>
+            </div>
+          </div>
+          <div className="mt-4 bg-red-100 p-3 rounded text-sm">
+            <div className="font-bold text-red-900">Value Erosion</div>
+            <div className="text-gray-700">Enterprise value deteriorates without active support</div>
+          </div>
+        </div>
+
+        <div className="bg-white p-8 rounded-lg shadow-lg border-l-4 border-green-500">
+          <h3 className="text-2xl font-bold mb-4 text-green-700">Post-Transaction: Clean Balance Sheet</h3>
+          <p className="text-gray-700 mb-6">Transaction recovery, eliminated legal risk, and redeployed capital</p>
+
+          <div className="space-y-4">
+            <div className="bg-green-50 p-4 rounded">
+              <h4 className="font-bold text-green-800 mb-2">Future Upside</h4>
+              <p className="text-sm text-gray-700">Through improved performance with potential structuring to provide a kicker with good performance</p>
+            </div>
+
+            <div className="bg-green-50 p-4 rounded">
+              <h4 className="font-bold text-green-800 mb-2">Regulatory Relief</h4>
+              <p className="text-sm text-gray-700">Stops assets getting worse and reducing likely potential value; removes need for lengthy legal proceedings and operational oversight</p>
+            </div>
+
+            <div className="bg-green-50 p-4 rounded">
+              <h4 className="font-bold text-green-800 mb-2">Focus on Core Lending</h4>
+              <p className="text-sm text-gray-700">Free up resources to focus on productive lending activities</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>,
+
+    // Page 4 - Our Complete Process (Steps 1-10 Combined)
+    <div key="4" className="p-12 bg-white min-h-screen flex flex-col">
+      <h1 className="text-5xl font-bold mb-8 text-gray-900">Our End-to-End Process</h1>
+      
+      <div className="grid grid-cols-2 gap-6">
+        <div className="bg-blue-50 p-6 rounded-lg border-l-4 border-blue-600">
+          <div className="font-bold text-blue-900 mb-2">Step 1: Asset Identification</div>
+          <p className="text-sm text-gray-700">Systematic engagement with UAE banks to identify NPL portfolios and individual distressed assets meeting our investment criteria. Build proprietary deal flow through relationship banking.</p>
+        </div>
+
+        <div className="bg-blue-50 p-6 rounded-lg border-l-4 border-blue-600">
+          <div className="font-bold text-blue-900 mb-2">Step 2: Comprehensive Due Diligence</div>
+          <p className="text-sm text-gray-700">Deploy experienced operational and financial teams to assess business fundamentals, asset quality, market positioning, and turnaround potential. Identify value creation levers and risks.</p>
+        </div>
+
+        <div className="bg-blue-50 p-6 rounded-lg border-l-4 border-blue-600">
+          <div className="font-bold text-blue-900 mb-2">Step 3: Valuation Development</div>
+          <p className="text-sm text-gray-700">Build detailed financial models incorporating operational improvements, market dynamics, and restructuring scenarios. Establish acquisition price range and value creation roadmap.</p>
+        </div>
+
+        <div className="bg-blue-50 p-6 rounded-lg border-l-4 border-blue-600">
+          <div className="font-bold text-blue-900 mb-2">Step 4: Debt Restructure Negotiation</div>
+          <p className="text-sm text-gray-700">Structure optimal transaction terms with lending banks, balancing immediate recovery needs with fair value recognition. Negotiate debt forgiveness and transfer arrangements.</p>
+        </div>
+
+        <div className="bg-green-50 p-6 rounded-lg border-l-4 border-green-600">
+          <div className="font-bold text-green-900 mb-2">Step 5: Shareholder Proposal</div>
+          <p className="text-sm text-gray-700">Present 10% retention offer to existing shareholders, providing exit with ongoing participation</p>
+        </div>
+
+        <div className="bg-green-50 p-6 rounded-lg border-l-4 border-green-600">
+          <div className="font-bold text-green-900 mb-2">Step 6: Legal Resolution</div>
+          <p className="text-sm text-gray-700">Execute formal agreements, transfer ownership, and resolve outstanding legal matters efficiently</p>
+        </div>
+
+        <div className="bg-purple-50 p-6 rounded-lg border-l-4 border-purple-600">
+          <div className="font-bold text-purple-900 mb-2">Step 7: Institute Governance</div>
+          <p className="text-sm text-gray-700">Establish professional board, implement controls, and create accountability framework</p>
+        </div>
+
+        <div className="bg-purple-50 p-6 rounded-lg border-l-4 border-purple-600">
+          <div className="font-bold text-purple-900 mb-2">Step 8: Strengthen Management</div>
+          <p className="text-sm text-gray-700">Recruit/upgrade key executives, align incentives, build high-performance culture</p>
+        </div>
+
+        <div className="bg-orange-50 p-6 rounded-lg border-l-4 border-orange-600">
+          <div className="font-bold text-orange-900 mb-2">Step 9: Operational Transformation</div>
+          <p className="text-sm text-gray-700">Execute comprehensive improvement plan across all business functions and operations</p>
+        </div>
+
+        <div className="bg-orange-50 p-6 rounded-lg border-l-4 border-orange-600">
+          <div className="font-bold text-orange-900 mb-2">Step 10: Growth via Network</div>
+          <p className="text-sm text-gray-700">Leverage strategic relationships and market access to accelerate revenue expansion</p>
+        </div>
+      </div>
+    </div>,
+
+    // Page 5 - Value Creation Strategy Combined with Success Factors
+    <div key="5" className="p-12 bg-gradient-to-br from-purple-50 to-blue-50 min-h-screen flex flex-col">
+      <h1 className="text-5xl font-bold mb-8 text-gray-900">Value Creation Strategy & Success Factors</h1>
+
+      <div className="grid grid-cols-2 gap-8">
+        <div className="space-y-6">
+          <div className="bg-white p-6 rounded-lg shadow-lg border-l-4 border-blue-600">
+            <div className="flex items-center mb-3">
+              <Shield className="w-8 h-8 text-blue-600 mr-3" />
+              <h3 className="text-xl font-bold text-gray-900">Improve Corporate Governance</h3>
+            </div>
+            <p className="text-sm text-gray-700">Install experienced independent directors, implement robust reporting systems, establish clear decision-making frameworks and strategic oversight mechanisms that drive accountability.</p>
+          </div>
+
+          <div className="bg-white p-6 rounded-lg shadow-lg border-l-4 border-green-600">
+            <div className="flex items-center mb-3">
+              <Users className="w-8 h-8 text-green-600 mr-3" />
+              <h3 className="text-xl font-bold text-gray-900">Strengthen Management</h3>
+            </div>
+            <p className="text-sm text-gray-700">Recruit proven operators with track records in turnarounds, align compensation with value creation, provide resources and mentorship to build a high-performing leadership team.</p>
+          </div>
+
+          <div className="bg-white p-6 rounded-lg shadow-lg border-l-4 border-purple-600">
+            <div className="flex items-center mb-3">
+              <Zap className="w-8 h-8 text-purple-600 mr-3" />
+              <h3 className="text-xl font-bold text-gray-900">Transform Operations</h3>
+            </div>
+            <p className="text-sm text-gray-700">Optimize cost structure, streamline processes, upgrade systems and technology, improve working capital management, and enhance product/service quality across all touchpoints.</p>
+          </div>
+        </div>
+
+        <div className="space-y-6">
+          <div className="bg-white p-6 rounded-lg shadow-lg border-l-4 border-orange-600">
+            <div className="flex items-center mb-3">
+              <Target className="w-8 h-8 text-orange-600 mr-3" />
+              <h3 className="text-xl font-bold text-gray-900">Digitalize & Utilize Technology</h3>
+            </div>
+            <p className="text-sm text-gray-700">Implement modern technology solutions to reduce costs, improve efficiency, enhance customer experience, and create competitive advantages through digital transformation.</p>
+          </div>
+
+          <div className="bg-white p-6 rounded-lg shadow-lg border-l-4 border-red-600">
+            <div className="flex items-center mb-3">
+              <TrendingUp className="w-8 h-8 text-red-600 mr-3" />
+              <h3 className="text-xl font-bold text-gray-900">Transform Marketing</h3>
+            </div>
+            <p className="text-sm text-gray-700">Revamp brand positioning, implement data-driven marketing strategies, expand digital presence, and create compelling value propositions to drive customer acquisition and retention.</p>
+          </div>
+
+          <div className="bg-white p-6 rounded-lg shadow-lg border-l-4 border-indigo-600">
+            <div className="flex items-center mb-3">
+              <Building2 className="w-8 h-8 text-indigo-600 mr-3" />
+              <h3 className="text-xl font-bold text-gray-900">Utilize Our Network to Drive Growth</h3>
+            </div>
+            <p className="text-sm text-gray-700">Expand market reach through our extensive network, pursue strategic partnerships, invest in sales and marketing, and develop new revenue streams to accelerate top-line growth.</p>
+          </div>
+        </div>
+      </div>
+
+      <div className="mt-8 bg-gradient-to-r from-blue-600 to-purple-600 text-white p-6 rounded-lg">
+        <h3 className="text-xl font-bold mb-2">Transformation Timeline</h3>
+        <p className="text-sm">Our comprehensive 12-24 month roadmap delivers measurable improvements at each stage, with clear milestones and value inflection points throughout the hold period.</p>
+      </div>
+    </div>,
+
+    // Page 6 - Target Profile & Financial Framework Combined
+    <div key="6" className="p-12 bg-white min-h-screen flex flex-col">
+      <h1 className="text-5xl font-bold mb-8 text-gray-900">Ideal Acquisition Candidate & Financial Framework</h1>
+
+      <div className="grid grid-cols-2 gap-8 mb-8">
+        <div className="bg-blue-50 p-8 rounded-lg">
+          <h3 className="text-2xl font-bold mb-4 text-blue-900">Financial Profile</h3>
+          <ul className="space-y-3 text-gray-700">
+            <li><strong>Revenue:</strong> €30–200m</li>
+            <li><strong>EBITDA:</strong> Break-even or slightly positive</li>
+            <li><strong>Debt:</strong> Secured bank debt {">"} Enterprise Value</li>
+          </ul>
+        </div>
+
+        <div className="bg-green-50 p-8 rounded-lg">
+          <h3 className="text-2xl font-bold mb-4 text-green-900">Operational Profile</h3>
+          <ul className="space-y-3 text-gray-700">
+            <li>• Asset-heavy business</li>
+            <li>• Identifiable core franchise</li>
+            <li>• Reversible operational issues</li>
+            <li>• Limited environmental liabilities</li>
+          </ul>
+        </div>
+      </div>
+
+      <div className="bg-purple-50 p-8 rounded-lg mb-8">
+        <h3 className="text-2xl font-bold mb-4 text-purple-900">Creditor Dynamics</h3>
+        <div className="grid grid-cols-3 gap-4 text-sm text-gray-700">
+          <div>• Bank lacks operational expertise</div>
+          <div>• Creditor consensus for swift solution</div>
+          <div>• Willingness for negotiated settlement</div>
+        </div>
+      </div>
+
+      <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-8 rounded-lg">
+        <h3 className="text-3xl font-bold mb-6">Financial Framework & Debt Structure</h3>
+        
+        <div className="grid grid-cols-3 gap-6 mb-6">
+          <div className="bg-white/20 p-4 rounded">
+            <div className="text-3xl font-bold mb-1">40-60%</div>
+            <div className="text-sm">Acquisition Price (0.4-0.6x of outstanding debt value)</div>
+          </div>
+          <div className="bg-white/20 p-4 rounded">
+            <div className="text-3xl font-bold mb-1">25-35%</div>
+            <div className="text-sm">Target IRR through operational value creation</div>
+          </div>
+          <div className="bg-white/20 p-4 rounded">
+            <div className="text-3xl font-bold mb-1">3-5 Years</div>
+            <div className="text-sm">Transformation and exit timeline</div>
+          </div>
+        </div>
+
+        <div className="bg-white/10 p-6 rounded-lg">
+          <h4 className="text-xl font-bold mb-3">Debt Restructuring Mechanism</h4>
+          <p className="text-sm mb-4">Banks write down existing debt completely, then provide new financing equal to 50% of the acquisition price, secured against the restructured business assets. This structure aligns interests and provides appropriate leverage for growth.</p>
+        </div>
+      </div>
+    </div>,
+
+    // Page 7 - Illustrative Example
+    <div key="7" className="p-12 bg-gradient-to-br from-gray-50 to-blue-50 min-h-screen flex flex-col">
+      <h1 className="text-5xl font-bold mb-8 text-gray-900">Illustrative Transaction Example</h1>
+
+      <div className="max-w-4xl mx-auto">
+        <div className="bg-white p-8 rounded-lg shadow-2xl">
+          <div className="grid grid-cols-2 gap-8 mb-8">
+            <div className="space-y-4">
+              <div className="bg-red-50 p-4 rounded">
+                <div className="text-sm text-gray-600">Debt Outstanding</div>
+                <div className="text-3xl font-bold text-red-700">AED 100M</div>
+              </div>
+              
+              <div className="bg-blue-50 p-4 rounded">
+                <div className="text-sm text-gray-600">Acquisition Price</div>
+                <div className="text-3xl font-bold text-blue-700">AED 50M</div>
+                <div className="text-xs text-gray-500">Banks write down debt to 0, relend at 50%</div>
+              </div>
+
+              <div className="bg-orange-50 p-4 rounded">
+                <div className="text-sm text-gray-600">Transformation Investment</div>
+                <div className="text-3xl font-bold text-orange-700">AED 15M</div>
+              </div>
+            </div>
+
+            <div className="space-y-4">
+              <div className="bg-purple-50 p-4 rounded">
+                <div className="text-sm text-gray-600">Total Investment</div>
+                <div className="text-3xl font-bold text-purple-700">AED 65M</div>
+              </div>
+
+              <div className="bg-green-50 p-4 rounded">
+                <div className="text-sm text-gray-600">Exit Value (Year 4)</div>
+                <div className="text-3xl font-bold text-green-700">AED 180M</div>
+              </div>
+
+              <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-4 rounded">
+                <div className="text-sm">Multiple on Invested Capital</div>
+                <div className="text-3xl font-bold">2.8x MOIC</div>
+              </div>
+
+              <div className="bg-gradient-to-r from-green-600 to-blue-600 text-white p-4 rounded">
+                <div className="text-sm">Internal Rate of Return</div>
+                <div className="text-3xl font-bold">29% IRR</div>
+              </div>
+            </div>
+          </div>
+
+          <div className="border-t-2 border-gray-200 pt-6">
+            <h3 className="text-2xl font-bold mb-4 text-gray-900">High-Level Economics</h3>
+            <div className="grid grid-cols-3 gap-4 text-sm">
+              <div className="bg-gray-50 p-4 rounded">
+                <div className="font-bold text-gray-700 mb-1">Acquisition</div>
+                <div className="text-gray-600">0.4x Peak EBITDA</div>
+              </div>
+              <div className="bg-gray-50 p-4 rounded">
+                <div className="font-bold text-gray-700 mb-1">Restructuring</div>
+                <div className="text-gray-600">Debt reduced to 0, refinanced at 50%</div>
+              </div>
+              <div className="bg-gray-50 p-4 rounded">
+                <div className="font-bold text-gray-700 mb-1">Growth</div>
+                <div className="text-gray-600">EBITDA Doubles in 24 Months</div>
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-6 grid grid-cols-2 gap-4">
+            <div className="bg-blue-50 p-4 rounded text-center">
+              <div className="text-4xl font-bold text-blue-700">{">"}28%</div>
+              <div className="text-sm text-gray-600">Internal Rate of Return (IRR)</div>
+            </div>
+            <div className="bg-green-50 p-4 rounded text-center">
+              <div className="text-4xl font-bold text-green-700">~2.5x</div>
+              <div className="text-sm text-gray-600">Cash-on-Cash Multiple</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>,
+
+    // Page 8 - Market Reality with Industry Context
+    <div key="8" className="p-12 bg-gradient-to-br from-slate-100 to-gray-100 min-h-screen flex flex-col">
+      <h1 className="text-5xl font-bold mb-8 text-gray-900">UAE Market Opportunity</h1>
+
+      <div className="grid grid-cols-2 gap-8 mb-8">
+        <div className="bg-white p-8 rounded-lg shadow-lg">
+          <h3 className="text-2xl font-bold mb-4 text-blue-900">Target Sectors</h3>
+          <div className="space-y-4">
+            <div className="flex items-center p-4 bg-blue-50 rounded">
+              <Building2 className="w-8 h-8 text-blue-600 mr-4" />
+              <div>
+                <div className="font-bold">Manufacturing & Industrial</div>
+                <div className="text-sm text-gray-600">Precision engineering, equipment manufacturing, industrial services</div>
+              </div>
+            </div>
+            <div className="flex items-center p-4 bg-green-50 rounded">
+              <Building2 className="w-8 h-8 text-green-600 mr-4" />
+              <div>
+                <div className="font-bold">Hospitality & Real Estate</div>
+                <div className="text-sm text-gray-600">Hotels, commercial properties, mixed-use developments</div>
+              </div>
+            </div>
+            <div className="flex items-center p-4 bg-purple-50 rounded">
+              <Building2 className="w-8 h-8 text-purple-600 mr-4" />
+              <div>
+                <div className="font-bold">Retail & Distribution</div>
+                <div className="text-sm text-gray-600">Specialty retail, wholesale distribution, logistics</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="bg-white p-8 rounded-lg shadow-lg">
+          <h3 className="text-2xl font-bold mb-4 text-red-900">Current Market Dynamics</h3>
+          <div className="space-y-4 text-gray-700">
+            <div className="p-4 bg-red-50 rounded">
+              <div className="font-bold mb-2">Regulatory Pressure</div>
+              <p className="text-sm">Banks face increasing pressure to clean balance sheets and reduce NPL ratios in line with Central Bank requirements</p>
+            </div>
+            <div className="p-4 bg-orange-50 rounded">
+              <div className="font-bold mb-2">Limited Expertise</div>
+              <p className="text-sm">Traditional lenders lack operational turnaround capabilities, leading to value erosion in distressed portfolios</p>
+            </div>
+            <div className="p-4 bg-yellow-50 rounded">
+              <div className="font-bold mb-2">Timing Advantage</div>
+              <p className="text-sm">Post-pandemic recovery creates unique window for acquiring quality assets at distressed valuations</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-8 rounded-lg">
+        <h3 className="text-3xl font-bold mb-4">Why Now?</h3>
+        <div className="grid grid-cols-3 gap-6 text-sm">
+          <div>
+            <div className="font-bold mb-2 text-lg">Market Maturity</div>
+            <p>UAE financial markets increasingly receptive to distressed asset solutions</p>
+          </div>
+          <div>
+            <div className="font-bold mb-2 text-lg">Proven Operators</div>
+            <p>Our team brings international expertise to local opportunities</p>
+          </div>
+          <div>
+            <div className="font-bold mb-2 text-lg">Win-Win Structure</div>
+            <p>Alignment of interests across all stakeholders creates sustainable outcomes</p>
+          </div>
+        </div>
+      </div>
+    </div>,
+
+    // Page 9 - Next Steps & Contact
+    <div key="9" className="p-12 bg-gradient-to-br from-slate-900 to-slate-800 text-white min-h-screen flex flex-col justify-between">
+      <div>
+        <h1 className="text-5xl font-bold mb-8">Next Steps</h1>
+
+        <div className="grid grid-cols-3 gap-8 mb-12">
+          <div className="bg-slate-800 p-6 rounded-lg border-l-4 border-blue-500">
+            <div className="text-3xl font-bold text-blue-400 mb-3">Days 1-30</div>
+            <h3 className="text-xl font-bold mb-3">Initiation</h3>
+            <ul className="text-sm space-y-2 text-gray-300">
+              <li>• Sign NDAs with target banks</li>
+              <li>• Access data rooms</li>
+              <li>• Shortlist target assets</li>
+              <li>• Submit initial bids</li>
+            </ul>
+          </div>
+
+          <div className="bg-slate-800 p-6 rounded-lg border-l-4 border-green-500">
+            <div className="text-3xl font-bold text-green-400 mb-3">Days 31-60</div>
+            <h3 className="text-xl font-bold mb-3">Due Diligence</h3>
+            <ul className="text-sm space-y-2 text-gray-300">
+              <li>• Complete confirmatory DD</li>
+              <li>• Finalize restructuring terms</li>
+              <li>• Develop 100-day plan</li>
+              <li>• Secure internal approvals</li>
+            </ul>
+          </div>
+
+          <div className="bg-slate-800 p-6 rounded-lg border-l-4 border-purple-500">
+            <div className="text-3xl font-bold text-purple-400 mb-3">Days 61-120</div>
+            <h3 className="text-xl font-bold mb-3">Closing</h3>
+            <ul className="text-sm space-y-2 text-gray-300">
+              <li>• Obtain credit approvals</li>
+              <li>• Resolve legal issues</li>
+              <li>• Close first acquisition</li>
+              <li>• Begin transformation</li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="bg-blue-900 p-8 rounded-lg">
+          <h3 className="text-2xl font-bold mb-4">Investment Thesis Summary</h3>
+          <p className="text-lg text-gray-200 mb-4">
+            We acquire quality distressed assets at deep discounts, implement operational improvements through proven methodologies, and generate superior risk-adjusted returns while creating value for all stakeholders.
+          </p>
+          <div className="grid grid-cols-4 gap-4 mt-6">
+            <div className="text-center">
+              <div className="text-3xl font-bold text-blue-400">25-35%</div>
+              <div className="text-sm text-gray-300">Target IRR</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-green-400">2.5-3.0x</div>
+              <div className="text-sm text-gray-300">MOIC</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-purple-400">3-5</div>
+              <div className="text-sm text-gray-300">Year Hold</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-orange-400">40-60%</div>
+              <div className="text-sm text-gray-300">Discount</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="mt-8 pt-8 border-t border-gray-700 text-center">
+        <p className="text-2xl font-bold mb-2">Investory Ltd</p>
+        <p className="text-gray-400">Distressed Asset Acquisition | 2025/10/30</p>
+      </div>
+    </div>
+  ];
+
+  return (
+    <div className="relative">
+      {pages[currentPage - 1]}
+      
+      {/* Page Number - Bottom Right */}
+      <div className="fixed bottom-8 right-8 bg-black/70 text-white px-4 py-2 rounded-lg font-bold">
+        Page {currentPage} of {totalPages}
+      </div>
+
+      {/* Navigation */}
+      <div className="fixed bottom-8 left-8 flex gap-4">
+        <button
+          onClick={() => setCurrentPage(Math.max(1, currentPage - 1))}
+          disabled={currentPage === 1}
+          className="bg-blue-600 hover:bg-blue-700 disabled:bg-gray-400 text-white px-6 py-2 rounded-lg font-bold transition"
+        >
+          ← Previous
+        </button>
+        <button
+          onClick={() => setCurrentPage(Math.min(totalPages, currentPage + 1))}
+          disabled={currentPage === totalPages}
+          className="bg-blue-600 hover:bg-blue-700 disabled:bg-gray-400 text-white px-6 py-2 rounded-lg font-bold transition"
+        >
+          Next →
+        </button>
+      </div>
+    </div>
+  );
+};
+
+export default Presentation;
